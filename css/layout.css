@@ -1,0 +1,159 @@
+.container {
+	display: block;
+	overflow: auto; /* 預設會自動使用捲軸 */
+	margin-left: auto; /* 水平置中 */
+	margin-right: auto; /* 水平置中 */
+	width: 100%;
+}
+.container .header {  /* 總框架-header */
+	display: block;
+	overflow: auto;
+	width: 1150px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.container .content {  /* 總框架 */
+	display: block;
+	overflow: auto;
+	width: 1150px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.container .footer {   /* 總框架-footer */
+	display: block;
+	overflow: auto;
+	width: 1150px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.container .navMenu {   /* navigation */
+	display: block;
+	overflow: auto;
+	height: 50px;
+	background-color: #EEEEEE;
+	width: 100%;   /* 佔滿寬 */
+	margin-bottom: 20px;
+}
+.container .header .headerLogo {
+	display: block;
+	float: left;
+	width: 160px;
+	height: 40px;
+	margin-top: 5px;
+	text-align: center;
+	margin-bottom: 5px;
+	margin-right: 20px;
+}
+.container .header .headerTBD {
+	display: block;
+	float: left;
+	width: 380px;
+	color: #333333;
+	font-size: 20px;
+	line-height: 20px;
+	margin-top: 15px;
+}
+.container .header .headerLogin {
+	display: block;
+	float: left;
+	width: 380px;
+	font-size: 12px;
+	text-align: right;
+	color: #333333;
+	margin-top: 18px;
+	line-height: 12px;
+	font-weight: bold;
+}
+.container .navMenu .MenuMain {
+	display: block;
+	float: left;
+	width: 900px;
+	margin-top: 16px;
+}
+.container .navMenu .MenuMain2 {
+	display: block;
+	float: left;
+	width: 900px;
+	margin-top: 16px;
+}
+.container .navMenu .MenuSet {
+	float: left;
+	display: block;
+	width: 180px;
+	margin-top: 19px;
+}
+.MenuBg .MenuMain .active {
+	color: #C70002;  /* 活動資料的紅字 */
+
+}
+.MenuBg .MenuMain li {
+	display: block;
+	float: left;
+	text-align: center;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+.MenuBg .MenuMain2 .active {
+	color: #C70002;
+
+}
+.MenuBg .MenuMain2 li {
+	display: block;
+	float: left;
+	text-align: center;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+.MenuBg .MenuSet li {
+	display: block;
+	float: left;
+	width: 90px;
+	text-align: center;
+}
+.MenuBg .MenuSet li a {
+	color: #888888;
+	font-size: 14px;
+	line-height: 14px;
+	text-decoration: none;
+}
+.MenuBg .MenuSet li a:hover {
+	color: #333333;
+}
+.MenuBg .MenuMain li a {
+	color: #777777;
+	font-size: 18px;
+	line-height: 18px;
+	text-decoration: none;
+}
+.MenuBg .MenuMain li a:hover {
+	color: #000000;
+}
+.MenuBg .MenuMain2 li a {
+	color: #777777;
+	font-size: 16px;
+	line-height: 16px;
+	text-decoration: none;
+}
+.MenuBg .MenuMain2 li a:hover {
+	color: #000000;
+}
+
+.container .navMenu .MenuBg {
+	width: 1150px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.header .headerLogin a {
+	text-decoration: none;
+	color: #FFFFFF;
+	background-color: #CCCCCC;
+	padding-left: 12px;
+	padding-right: 12px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	margin-left: 7px;
+	border-radius: 10px;
+}
+.header .headerLogin a:hover {
+	background-color: #999999;
+}

@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>page1_k_IjFoto Events Manager</title>
+<link href="css/reset.css" rel="stylesheet" type="text/css">
+<link href="css/font-awesome.css" rel="stylesheet" type="text/css">
+<link href="css/layout.css" rel="stylesheet" type="text/css">
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<link href="css/text.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div class="container"> <!-- 總外框架 -->
+
+	<!DOCTYPE html>
+
+
+
+
+	<!-- header -->
+    <div class="header">
+		<div class="headerLogo"><img src="images/header_logo.jpg" width="160" height="40" alt="暫無圖"/></div>
+		<div class="headerTBD">喜識數位 </div>
+		<div class="headerLogin">廠商:喜識數位&nbsp;&nbsp;會員:Admin<a href="default.jsp">登出</a></div>
+	</div>
+	<!-- /header -->
+
+	<!-- navigation -->
+	<div class="navMenu">
+		<div class="MenuBg">
+		  <ul class="MenuMain">	  
+			<li><a href='ijevent.jsp'>活動管理</a></li>
+			<li><a href='#' class='active'>活動資料</a></li>
+			<li><a id='eventphoto' href='javascript:toeventphoto()'>圖片管理</a></li>
+			<li><a id='userphoto' href='javascript:touserphoto()'>來賓相片管理</a></li>  
+		  </ul>
+		</div>
+	</div>
+	<!-- /navigation -->
+	
+	<div class="content">
+	
+	  <div class="content">
+	  	<table width="710" border="0" align="center" cellpadding="0" cellspacing="0">
+		  	<tbody>
+		      <tr>
+		        <td width="5">&nbsp;</td>
+		        <td>
+		          <ul class="homeList">
+				    <li class="w2">
+				      <div class="listTxt">活動啓動密碼</div>
+				      <div><a id="eventpw" class="listNum3" href="#"></a></div>
+				    </li>
+				    <li class="w2">
+				      <div class="listTxt">活動賓客上傳相片輪播</div>
+				      <div><a id="showbtn" class="listNum3" href="#">輪　播　秀</a></div>
+				    </li>
+				  </ul>
+		        </td>
+		      </tr>
+		    </tbody>
+	  	</table>  
+	</div>
+
+	<div class="content">
+	  <table width="750" border="0" align="center" cellpadding="0" cellspacing="0">
+	    <tbody>
+	      <tr>
+	        <td height="40" align="center" bgcolor="#EEEEEE" class="T18 colBlack">
+	        	<div>
+	        		<table width="750" border="0" cellpadding="0" cellspacing="0">
+	        			<tr>
+		        			<td width="140">&nbsp;&nbsp;</td>
+			        		<td width="330" align="center">主題基本資料</td>
+			        		<td width="140"><!-- <a id="pwbtn" class="loginBtm" href="javascript:geteventpw()">取密碼</a> --></td>
+			        		<td width="140"><a id="txtbtn" class="loginBtm" href="javascript:showlanguage()">多語系</a></td>
+			        	</tr>
+	        		</table>
+	        	</div>
+	        </td>
+	      </tr>
+	    </tbody>
+	  </table>
+
+	<!-- table1 -->
+	  <table width="750" border="1" align="center" cellpadding="0" cellspacing="0" class="tStyle2">
+	    <tbody>
+	      <tr class="T14 colBlack" bgcolor="pink">
+			<div>
+				<table width="750" border="1" align="center" cellpadding="0" cellspacing="0" class="tStyle2" style="table-layout: fixed";>
+				<col width="15%" />
+    			<col width="35%" />
+    			<col width="15%" />
+    			<col width="35%" />
+				<tr>
+			        <td style="overflow: hidden;">主題編號</td>
+			        <td id="eventsn" style="overflow: hidden;">38</td>
+			        <td style="overflow: hidden;">訂單編號</td>
+			        <td id="eventsn" style="overflow: hidden;"><input name="eventname" type="text" class="textfield01" size="30"></td>
+		        </tr>
+		        </table>
+	        </div>
+	      </tr>
+		</tbody>
+	</table>
+
+	<table width="750" border="1" align="center" cellpadding="0" cellspacing="0" class="tStyle2">
+	    <tbody>
+	      <tr class="T14 colBlack">
+	        <td>活動名稱</td>
+	        <td><input name="eventname" type="text" class="textfield01" size="50"><font size="2" color="#777777">&nbsp;</font><br/>
+	        	<div id="eventname_en"><input name="eventname_en" type="text" class="textfield01" size="50"><font size="2" color="#777777">&nbsp;(英)</font><br/>
+	        	<input name="eventname_zh" type="text" class="textfield01" size="50"><font size="2" color="#777777">&nbsp;(簡)</font></div></td>
+	      </tr>
+	      <tr class="T14 colBlack">
+	        <td>活動提醒</td>
+	        <td><input name="eventhint" type="text" class="textfield01" size="50"><font size="2" color="#777777">&nbsp;</font><br/>
+	        	<div id="eventhint_en"><input name="eventhint_en" type="text" class="textfield01" size="50"><font size="2" color="#777777">&nbsp;(英)</font><br/>
+	        	<input name="eventhint_zh" type="text" class="textfield01" size="50"><font size="2" color="#777777">&nbsp;(簡)</font></div></td>
+	      </tr>
+	      <tr class="T14 colBlack">
+	        <td>活動描述</td>
+	        <td>
+	        <input name="eventdesc" type="text" class="textfield01" size="70"><font size="2" color="#777777">&nbsp;</font><br/>
+		        <div id="eventdesc_en"><input name="eventdesc_en" type="text" class="textfield01" size="70"><font size="2" color="#777777">&nbsp;(英)</font><br/>
+		        <input name="eventdesc_zh" type="text" class="textfield01" size="70"><font size="2" color="#777777">&nbsp;(簡)</font></div></td>
+	      </tr>
+	      <tr class="T14 colBlack">
+	        <td>訂單編號</td>
+	        <td><input name="orderno" type="text" class="textfield01" size="50"><font size="2" color="#777777"></font></td>
+	      </tr>
+	      
+	      <tr class="T14 colBlack">
+	        <td>活動種類</td>
+	        <td><select id="zone1" class="select02">
+	          <option id="opt1">活動</option>
+		        </select></td>
+		      </tr>
+	      <tr class="T14 colBlack">
+	        <td>活動分類</td>
+	        <td><select id="zone2" class="select02">
+	            <option id="opt2">請選擇</option>
+	          </select><input id="eventcode" name="eventcode" type="hidden"></td>
+	      </tr>
+
+	      <tr class="T14 colBlack">
+	        <td>上架時間<br/>ex.2016-1-30</td>
+	        <td><input name="startdate1" type="text" class="textfield01" size="10">&nbsp;-&nbsp;
+		        <input name="startdate2" type="text" class="textfield01" size="10">&nbsp;-&nbsp;
+		        <input name="startdate3" type="text" class="textfield01" size="10"><font size="2" color="#777777">&nbsp;(需有上架時間才能上架)</font></td>
+	      </tr>
+	      <tr class="T14 colBlack">
+	        <td>下架時間<br/>ex.2016-1-30</td>
+	        <td><input name="enddate1" type="text" class="textfield01" size="10">&nbsp;-&nbsp;
+		        <input name="enddate2" type="text" class="textfield01" size="10">&nbsp;-&nbsp;
+		        <input name="enddate3" type="text" class="textfield01" size="10"><font size="2" color="#777777">&nbsp;(需有下架時間)</font></td>
+	      </tr>
+	      <tr class="T14 colBlack">
+	        <td>下載次數限制</td>
+	        <td><input name="allowamount" type="text" class="textfield01" size="50"><font size="2" color="#777777">&nbsp;(0代表無次數限制)</font></td>
+	      </tr>
+	      <tr class="T14 colBlack">
+	        <td>啟用文字泡泡</td>
+	        <td>&nbsp;&nbsp;&nbsp;&nbsp;
+	        	<input type="radio" name="tbub" value="1">&nbsp;&nbsp;是 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	        	<input type="radio" name="tbub" value="0" checked>&nbsp;&nbsp;否 </td></tr>
+	      <tr class="T14 colBlack">
+	        <td>是否可輪播</td>
+	        <td>&nbsp;&nbsp;&nbsp;&nbsp;
+	        	<input type="radio" name="pshow" value="1">&nbsp;&nbsp;是 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	        	<input type="radio" name="pshow" value="0" checked>&nbsp;&nbsp;否 </td></tr>
+	      <tr class="T14 colBlack">
+	        <td>輪播文字顯示</td>
+	        <td>&nbsp;&nbsp;&nbsp;&nbsp;
+	        	<input type="radio" name="isptext" value="1">&nbsp;&nbsp;是 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	        	<input type="radio" name="isptext" value="0" checked>&nbsp;&nbsp;否 </td></tr>
+	        	
+	      <tr class="T14 colBlack">
+	        <td>活動推播範圍</td>
+	        <td>&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="radio" name="phtype" value="0">&nbsp;&nbsp;全部&nbsp;&nbsp;&nbsp;
+
+	        	<input type="radio" name="phtype" value="1"  checked>&nbsp;&nbsp;本廠商&nbsp;&nbsp;&nbsp;
+	        	<input type="radio" name="phtype" value="2">&nbsp;&nbsp;全活動&nbsp;&nbsp;&nbsp;
+	        	<input type="radio" name="phtype" value="3">&nbsp;&nbsp;本類別&nbsp;&nbsp;&nbsp;
+	        	<input type="radio" name="phtype" value="4">&nbsp;&nbsp;本活動&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	        	</td>
+	      </tr>
+	      <tr class="T14 colBlack">
+	        <td>活動推播文字</td>
+	        <td><div><table width="600" border="0" cellpadding="0" cellspacing="0">
+	        		<tr><td width="480"><input name="phtext" type="text" class="textfield01" size="45"><font size="2" color="#777777">&nbsp;(訊息限長：200字元)</font><br/>
+	        			<div id="phtext_en"><input name="phtext_en" type="text" class="textfield01" size="45"><font size="2" color="#777777">&nbsp;(英)</font><br/>
+	        			<input name="phtext_zh" type="text" class="textfield01" size="45"><font size="2" color="#777777">&nbsp;(簡)</font></div></td>
+		        		<td width="120"><a id="pushbtn" class="loginBtm" href="javascript:mypush(1)">推活動</a></td></tr>
+		        	<tr><td width="480"><input name="phlink" type="text" class="textfield01" size="45"><font size="2" color="#777777">&nbsp;(連結限長：200字元)</font></td>
+		        		<td width="120"><a id="pushbtn1" class="loginBtm" href="javascript:mypush(2)">推連結</a></td></tr>
+	        		</table></div></td>
+	      </tr>	
+	      
+	      <tr class="T14 colBlack">
+	        <td>投影寬度</td>
+	        <td><input name="pwidth" type="text" class="textfield01" size="50"><a>&nbsp;px</a></td>
+	      </tr>
+	      <tr class="T14 colBlack">
+	        <td>每張相片播放秒數</td>
+	        <td><input name="psecond" type="text" class="textfield01" size="50"><a>&nbsp;</a></td>
+	      </tr>
+	      <tr class="T14 colBlack">
+	        <td>相片轉向前每輪播放張數</td>
+	        <td><input name="pcount" type="text" class="textfield01" size="50"><a>&nbsp;</a></td>
+	      </tr>
+	      <tr class="T14 colBlack">
+	        <td>用戶上傳照片</td>
+	        <td>&nbsp;&nbsp;&nbsp;&nbsp;
+	        	<input type="radio" name="isupimg" value="1">&nbsp;&nbsp;是 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	        	<input type="radio" name="isupimg" value="0" checked>&nbsp;&nbsp;否 </td></tr>
+	      
+	      <tr class="T14 colBlack">
+	        <td>上傳次數限制</td>
+	        <td><input name="allowupload" type="text" class="textfield01" size="50"><font size="2" color="#777777">&nbsp;(0代表無次數限制)</font></td>
+	      </tr>
+	      <tr class="T14 colBlack">
+	        <td>上傳按鍵文字</td>
+	        <td><input name="uploadbtntxt" type="text" class="textfield01" size="50"><font size="2" color="#777777">&nbsp;(10字以內,不可空白)</font><br/>
+	        	<div id="uploadbtntxt_en"><input name="uploadbtntxt_en" type="text" class="textfield01" size="50"><font size="2" color="#777777">&nbsp;(英)</font><br/>
+	        	<input name="uploadbtntxt_zh" type="text" class="textfield01" size="50"><font size="2" color="#777777">&nbsp;(簡)</font></div></td>
+	      </tr>
+	      <tr class="T14 colBlack">
+	        <td>上傳對話窗文字</td>
+	        <td><input name="uploadtxt" type="text" class="textfield01" size="50"><font size="2" color="#777777">&nbsp;(28字內)</font><br/>
+	        	<div id="uploadtxt_en"><input name="uploadtxt_en" type="text" class="textfield01" size="50"><font size="2" color="#777777">&nbsp;(英)</font><br/>
+	        	<input name="uploadtxt_zh" type="text" class="textfield01" size="50"><font size="2" color="#777777">&nbsp;(簡)</font></div></td>
+	      </tr>
+	      <tr class="T14 colBlack">
+	        <td>啟用FaceBook</td>
+	        <td>
+				<input type="radio" name="fbon" value="1" checked>&nbsp;&nbsp;是 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<input type="radio" name="fbon" value="0">&nbsp;&nbsp;否 </td>
+	      </tr>
+	      <tr class="T14 colBlack">
+	        <td>FaceBook Tag</td>
+	        <td><input name="fbtag" type="text" class="textfield01" size="50"><font size="2" color="#777777">&nbsp;(只能放一個Tag)</font></td>
+	      </tr>
+	      <tr class="T14 colBlack">
+	        <td>啟用Line</td>
+	        <td>
+				<input type="radio" name="lion" value="1" checked>&nbsp;&nbsp;是 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<input type="radio" name="lion" value="0">&nbsp;&nbsp;否 </td>
+	      </tr>
+	      <tr class="T14 colBlack">
+	        <td>啟用其他分享</td>
+	        <td>
+				<input type="radio" name="oton" value="1" checked>&nbsp;&nbsp;是 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<input type="radio" name="oton" value="0">&nbsp;&nbsp;否 </td>
+	      </tr>
+	      <tr class="T14 colBlack"><td>&nbsp;&nbsp;</td><td>&nbsp;&nbsp;</td></tr>
+	    </tbody>
+	  </table>
+	  <table width="750" border="0" align="center" cellpadding="0" cellspacing="0">
+	    <tbody>
+	      <tr>
+	        <td height="40" align="center" bgcolor="#EEEEEE" class="T18 colBlack">客戶基本資料</td>
+	      </tr>
+	    </tbody>
+	  </table>
+	  <table width="750" border="0" align="center" cellpadding="0" cellspacing="0" class="tStyle2">
+	    <tbody>
+	      <tr class="T14 colBlack">
+	        <td width="90">姓</td>
+	        <td><input name="firstname" type="text" class="textfield01" size="50"></td>
+	      </tr>
+	      <tr class="T14 colBlack">
+	        <td>名</td>
+	        <td><input name="lastname" type="text" class="textfield01" size="50"></td>
+	      </tr>
+	      <tr class="T14 colBlack">
+	        <td>手機</td>
+	        <td><input name="mobile" type="text" class="textfield01" size="50"></td>
+	      </tr>
+	      <tr class="T14 colBlack">
+	        <td>email</td>
+	        <td><input name="email" type="text" class="textfield01" size="50"></td>
+	      </tr>
+	      <tr class="T14 colBlack">
+	        <td>備註</td>
+	        <td><textarea name="comments" id="comments" cols="45" rows="5" class="textfield02"></textarea></td>
+	      </tr>
+	    </tbody>
+	</table>
+	  <table id="eventbtn" width="120" border="0" align="center" cellpadding="0" cellspacing="0">
+          <tbody>
+            <tr><td>&nbsp;&nbsp;</td></tr>
+            <tr>
+              <td height="50"><!-- 只能透過調整table寬度來改變下方Btn位置,無法使用align -->
+              	<a id="savebtn" class="loginBtm" href="javascript:mysave(1)">儲　存</a>
+              </td>
+            </tr>
+            <tr><td>&nbsp;&nbsp;</td></tr>
+		    <tr><td>&nbsp;&nbsp;</td></tr>
+		    <tr><td>&nbsp;&nbsp;</td></tr>
+		    <tr><td>&nbsp;&nbsp;</td></tr>
+		    <tr><td>&nbsp;&nbsp;</td></tr>
+          </tbody>
+        </table>
+	</div>
+	
+</div>
+</body>
+</html>
