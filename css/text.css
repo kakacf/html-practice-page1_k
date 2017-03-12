@@ -92,10 +92,10 @@
 	padding-right: 5px;
 }
 .container .content .tStyle2 {
-	border-top: 1px solid #EEE;
+	border-top: 1px solid #EEE; 
 }
 .container .content .tStyle2 tr{
-	border-bottom: 1px solid red;
+	border-bottom: 1px solid #EEE; 
 }
 .container .content .tStyle2 td{
 	padding-top: 10px;
@@ -147,7 +147,7 @@ td .select02 {
 	line-height: 14px;
 	padding-left: 5px;
 	padding-right: 5px;
-	width: 370px;
+	width: 150px; /* 原本370px */
 }
 td .select03 {
 	border: 1px solid #CCCCCC;
